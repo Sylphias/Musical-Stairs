@@ -193,58 +193,11 @@ void loop()
 void samePreviousNote(int currentNote){
   if (currentNote != previousNote)
   {
-    //tmrpcm.stopPlayback();
     previousNote = currentNote; 
   }
-    //resetDisabled();
-    //setDisabledState(currentNote);
-  
-}
-// This function sets a disabled state for each note to prevent repeated playing if panel is stepped on continuously
-void setDisabledState(int currentNote){
-  Serial.println("Setting disabled state on: ");
-  Serial.print(currentNote);
-  
-  switch(currentNote){
-    case 1:
-      disabledDo = true;
-    break;
-    case 2:
-      disabledRe = true;
-    break;
-    case 3:
-      disabledMi = true;
-    break;
-    case 4:
-      disabledFa = true;
-    break;
-    case 5:
-      disabledSo = true;
-    break;
-    case 6:
-      disabledLa = true;
-    break;
-    case 7:
-      disabledTi = true;
-    break;
-    case 8:
-      disabledDo2 = true;
-    break;
-  }
+
 }
 
-// Reset all the disabled states
-void resetDisabled(){
-  Serial.print("Resetted!");
-  bool disabledDo = false;
-  bool disabledRe = false;
-  bool disabledMi = false;
-  bool disabledFa = false;
-  bool disabledSo = false;
-  bool disabledLa = false;
-  bool disabledTi = false;
-  bool disabledDo2 = false;
-}
 
 void debugCode(){
       Serial.println(digitalRead(pinDo));
@@ -265,6 +218,7 @@ void debugCode(){
     Serial.print("  ");
     Serial.print("  ");
 }
+
 
 
 
